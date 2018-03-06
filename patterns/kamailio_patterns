@@ -1,0 +1,5 @@
+KAMAILIO_LOG %{KAMAILIO_LOG_LEVEL} %{KAMAILIO_MODULE} %{KAMAILIO_MSG}
+KAMAILIO_LOG_LEVEL %{WORD:kam_log_level}:
+KAMAILIO_MODULE (\<%{WORD:kam_module}\>:)|(%{KAMAILIO_MODULE_DETAILS})
+KAMAILIO_MODULE_DETAILS %{WORD:kam_module} \[%{DATA:kam_mod_func_location}\]: %{DATA:kam_mod_function}:
+KAMAILIO_MSG %{GREEDYDATA:kam_msg}
